@@ -1,6 +1,6 @@
 #sh
-infile="./rnn_random_data.txt"
-#infile="../Tools/data.txt"
-tfrecordfile="./rnn_test.tfrecord"
+datapath="/search/odin/lizhengyu/code2020/RNN/data/"
+emdfile=$datapath"emd_table.tfrecord"
+tfrecordfile=$datapath"star_classfy.tfrecord"
 
-python TFRecordMaker.py $infile $tfrecordfile
+python simple_rnn_train.py $emdfile $tfrecordfile
